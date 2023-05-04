@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("App Bar"),
-        backgroundColor: const Color.fromARGB(255, 154, 36, 175),
+        backgroundColor: const Color.fromARGB(255, 0, 142, 244),
       ),
       drawer: const Drawer(),
       body: Center(
