@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_catalog/utils/MyDrawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -7,10 +9,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        systemOverlayStyle:
+            const SystemUiOverlayStyle(statusBarColor: Colors.blue),
         title: const Text("App Bar"),
-        backgroundColor: const Color.fromARGB(255, 0, 142, 244),
+        backgroundColor: const Color.fromARGB(255, 33, 150, 243),
       ),
-      drawer: const Drawer(),
+      drawer: const MyDrawer(),
       body: Center(
         child: Container(
           child: const Text(
