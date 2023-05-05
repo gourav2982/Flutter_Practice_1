@@ -9,10 +9,16 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        systemOverlayStyle:
-            const SystemUiOverlayStyle(statusBarColor: Colors.blue),
-        title: const Text("App Bar"),
-        backgroundColor: const Color.fromARGB(255, 33, 150, 243),
+        elevation: 0,
+        iconTheme: const IconThemeData(color: Colors.blue),
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.blue,
+        ),
+        title: const Text(
+          "Catalog App",
+          style: TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.white,
       ),
       drawer: const MyDrawer(),
       body: Center(
