@@ -8,14 +8,30 @@ class ItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: ListTile(
-        leading: Image.network(item.image),
-        title: Text(item.name),
-        subtitle: Text(item.description),
-        trailing: Text("₹ ${item.price.toString()}",
-            textScaleFactor: 1.4,
-            style: const TextStyle(
-                color: Colors.blue, fontWeight: FontWeight.w900)),
+      clipBehavior: Clip.antiAlias,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      child: GridTile(
+        header: Container(
+          decoration: const BoxDecoration(
+            color: Colors.blue,
+          ),
+          padding: const EdgeInsets.all(12),
+          child: Text(
+            item.name,
+            style: const TextStyle(color: Colors.white),
+          ),
+        ),
+        footer: Container(
+          decoration: const BoxDecoration(
+            color: Colors.black,
+          ),
+          padding: const EdgeInsets.all(12),
+          child: Text(
+            "₹${item.price.toString()}",
+            style: const TextStyle(color: Colors.white),
+          ),
+        ),
+        child: Image.network(item.image),
       ),
     );
   }
